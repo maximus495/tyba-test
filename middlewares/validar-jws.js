@@ -16,22 +16,6 @@ const validarJWT = async(req, res=response, next) =>{
         const {uid} = jwt.verify(token, config.jwt.secret);
         req.uid = uid;
         console.log(uid);
-        //leer usuario que corresponde al id
-        // const usuario = await Usuario.findById(uid);
-        // if (!usuario) {
-        //     return res.status(401).json({
-        //         msg:'usuario eiminado'
-        //     });
-        // }
-        
-        // req.usuario = usuario
-        // //verificar si el uid no esta falso
-        // if (!usuario.estado) {
-        //     return res.status(401).json({
-        //         msg:'usuario eiminado'
-        //     });
-        // }
-
         next()
     } catch (error) {
         console.log(error);

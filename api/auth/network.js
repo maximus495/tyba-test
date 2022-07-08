@@ -1,12 +1,12 @@
 const { Router } = require('express');
-// const { check } = require('express-validator');
-
 const {login} = require('./controller')
+
+// const { check } = require('express-validator');
 // const {validarCampos} = require('../middlewares/validar-campos')
 
 const router = Router();
 
-// router.post('/login',[
+// router.post('/login',[    // middlewares para validar los campos :( no me dio el tiempo 
 
 //     check('correo','Correo obligatorio').isEmail(),
 //     check('password','La constraseña es obligatoria').not().isEmpty(),
@@ -14,8 +14,6 @@ const router = Router();
 // ], login)
 
 router.post('/login', login)
-
-
 
 
 
